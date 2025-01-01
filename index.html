@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="jocafo">
+    <meta name="description" content="2025countdown">
+    <meta name="date of creation" content="31/12/2024">
+    <title> New Years Countdown</title>
+    <link rel="icon" href="html1.png" type="image/x-icon">
+    <link rel="stylesheet" href="main.css">
+    <style>
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+
+</head>
+
+
+<body>
+    <h1>Welcome To 2025.</h1>
+    <p>This final countdown should release a gif when the clock hits its final seconds.</p>
+    <div> 00:00:00</div>
+    
+    <h2>mi mision.</h2>
+    <p>la mision o el proposito del sitio web es poder ilustrar el momento en el que la cuenta regresiva de año nuevo llegue a cero para poder colocar un gif divertido.</p>
+    <p><em>Happy New Year.</em></p>
+    <hr>
+    <div id="reloj">Cargando...</div>
+
+    <!-- Add your GIF here -->
+    <img src=https://media.giphy.com/media/xT0xeJpnrWC4XWblEk/giphy.gif alt="Funny GIF">
+
+    <script>
+        function actualizarReloj() {
+            const ahora = new Date(); // Objeto Date válido
+            const horas = ahora.getHours().toString().padStart(2, '0'); // Obtiene horas
+            const minutos = ahora.getMinutes().toString().padStart(2, '0'); // Obtiene minutos
+            const segundos = ahora.getSeconds().toString().padStart(2, '0'); // Obtiene segundos
+
+            document.getElementById('reloj').textContent = `${horas}:${minutos}:${segundos}`;
+        }
+
+        setInterval(actualizarReloj, 1000);
+        actualizarReloj();
+
+         // Verifica si es Año Nuevo 2025
+         const dia = ahora.getDate(); 
+            const mes = ahora.getMonth() + 1; // Enero es 0
+            const año = ahora.getFullYear();
+
+            if (dia === 1 && mes === 1 && año === 2025) {
+                document.getElementById('mensaje').textContent = "¡Feliz Año Nuevo 2025!";
+            }
+            
+    </script>
+
+
+    <hr>
+
+    <p>all rigths reserved.</p>
+    &lt;&lt;&lt; &copy; Castillo Corp. &gt;&gt;&gt;
+    
+
+</body> 
+
+</html>
